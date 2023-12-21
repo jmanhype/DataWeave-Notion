@@ -1,0 +1,15 @@
+import type { ComponentChildren } from 'astro';
+
+interface BadgeProps {
+  variant: 'secondary' | 'default';
+  children: ComponentChildren;
+}
+
+export default function Badge({ variant, children }: BadgeProps) {
+  const className = variant === 'secondary' ? 'badge-secondary-class' : 'badge-default-class';
+  return (
+    <span className={className}>
+      {children}
+    </span>
+  );
+}

@@ -1,0 +1,13 @@
+import type { ComponentChildren } from 'astro';
+
+interface TableProps {
+  children: ComponentChildren;
+}
+
+export default function Table({ children }: TableProps) {
+  return (
+    <table>
+      {children}
+    </table>
+  );
+}
