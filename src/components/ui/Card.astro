@@ -1,0 +1,13 @@
+import type { ComponentChildren } from 'astro';
+
+interface CardProps {
+  children: ComponentChildren;
+}
+
+export default function Card({ children }: CardProps) {
+  return (
+    <div className="card-class">
+      {children}
+    </div>
+  );
+}

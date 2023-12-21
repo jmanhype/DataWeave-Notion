@@ -1,0 +1,26 @@
+import type { ComponentChildren } from 'astro';
+
+interface ButtonProps {
+  variant: 'outline' | 'ghost' | 'solid';
+  children: ComponentChildren;
+}
+
+export default function Button({ variant, children }: ButtonProps) {
+  let className = '';
+  switch (variant) {
+    case 'outline':
+      className = 'button-outline-class';
+      break;
+    case 'ghost':
+      className = 'button-ghost-class';
+      break;
+    default:
+      className = 'button-solid-class';
+      break;
+  }
+  return (
+    <button className={className}>
+      {children}
+    </button>
+  );
+}
