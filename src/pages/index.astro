@@ -1,17 +1,26 @@
 ---
+import { MenuIcon, SearchIcon, ShoppingCartIcon, FacebookIcon, TwitterIcon, LinkedinIcon, PlayIcon, FlagIcon, SwissFrancIcon } from '../components/ui/icons.ts';
 import Badge from '../components/ui/Badge.astro';
 import Button from '../components/ui/Button.astro';
 import Card, { CardHeader, CardContent, CardTitle } from '../components/ui/Card.astro';
 import Table, { TableHead, TableRow, TableHeader, TableCell, TableBody } from '../components/ui/Table.astro';
 import LineChart from '../components/ui/LineChart.astro';
 import Avatar from '../components/ui/Avatar.astro';
-import { FacebookIcon, TwitterIcon } from '../components/ui/icons.ts';
 ---
 
-<!-- ... main page content here, utilizing the imported components ... -->
-
-<footer>
-  <!-- Footer content with icons -->
-  <span dangerouslySetInnerHTML={{ __html: FacebookIcon }} />
-  <span dangerouslySetInnerHTML={{ __html: TwitterIcon }} />
-</footer>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bricks Cloud Technologies</title>
+</head>
+<body>
+    <div class="container mx-auto px-4">
+        <nav class="flex justify-between items-center py-4">
+            <MenuIcon class="text-black" />
+            <!-- The rest of the navigation bar -->
+        </nav>
+        <!-- The rest of the section continue here -->
+    </div>
+</body>
+</html>
