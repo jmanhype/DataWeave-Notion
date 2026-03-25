@@ -1,54 +1,71 @@
-# Astro Starter Kit: Basics
+# DataWeave-Notion
 
-```sh
-npm create astro@latest -- --template basics
+Static landing page built with Astro 4 and Tailwind CSS. Contains a component library of common UI elements (tables, charts, cards, badges, avatars, buttons) styled for a data-dashboard aesthetic.
+
+Despite the repository name, this project does not integrate with the Notion API. It is a frontend template.
+
+## What It Contains
+
+A single-page Astro site with 14 reusable `.astro` components:
+
+| Component | File | Description |
+|-----------|------|-------------|
+| Card | `src/components/ui/Card.astro` | Container with header, content, title slots |
+| Table | `src/components/ui/Table.astro` | Data table with head, body, row, cell |
+| LineChart | `src/components/ui/LineChart.astro` | Static chart component |
+| Badge | `src/components/ui/Badge.astro` | Status/label indicator |
+| Button | `src/components/ui/Button.astro` | Action button |
+| Avatar | `src/components/ui/Avatar.astro` | User avatar |
+| HeroSection | `src/components/HeroSection.astro` | Page hero block |
+| NavBar | `src/components/NavBar.astro` | Navigation bar |
+| Footer | `src/components/Footer.astro` | Page footer |
+
+Icons are defined in `src/components/ui/icons.ts` (Menu, Search, ShoppingCart, Facebook, Twitter, Linkedin, Play, Flag, SwissFranc).
+
+## Tech Stack
+
+| Tool | Version |
+|------|---------|
+| Astro | 4.0.6 |
+| TypeScript | 5.3 |
+| Tailwind CSS | 3.3.6 |
+| @astrojs/check | 0.3.3 |
+
+## Setup
+
+```bash
+npm install
+npm run dev       # Dev server at localhost:4321
+npm run build     # Production build to ./dist/
+npm run preview   # Preview production build
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Project Structure
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+src/
+  components/
+    ui/           # 9 reusable UI components + icons
+    Card.astro    # Page-level card (separate from ui/Card)
+    HeroSection.astro
+    NavBar.astro
+    Footer.astro
+  layouts/
+    Layout.astro  # Root HTML layout
+  pages/
+    index.astro   # Single page, composes all components
+public/
+  favicon.svg
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Limitations
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- Single page only -- no routing
+- No Notion API integration despite the repo name
+- Chart component renders static markup, not interactive charts
+- No data fetching or backend connectivity
+- Components are not published as a standalone package
 
-Any static assets, like images, can be placed in the `public/` directory.
+## License
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Not specified.
